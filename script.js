@@ -372,7 +372,7 @@
      Skript im <head> gesetzt (verhindert Aufblitzen). Hier
      wird der Umschalter verdrahtet und der Zustand gepflegt.
   -------------------------------------------------------- */
-  const THEME_KEY = "portfolio-theme";
+  const THEME_KEY = "portfolio-theme-v2";
   const themeToggle = document.getElementById("themeToggle");
 
   function currentTheme() {
