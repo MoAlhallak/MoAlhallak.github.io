@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Mohammad Al Hallak — Full-Stack- & Backend-Entwickler | Portfolio</title>
+  <meta name="description" content="Portfolio von Mohammad Al Hallak, B.Sc. Informatik und M.Sc.-Student Internet-Sicherheit. Schwerpunkte: Full-Stack- und Backend-Entwicklung, Datenanalyse und Security-nahe Softwarelösungen." />
+  <meta name="author" content="Mohammad Al Hallak" />
+  <meta name="keywords" content="Mohammad Al Hallak, Full-Stack, Backend, Java, Spring Boot, Python, Datenanalyse, IT-Sicherheit, Portfolio, Softwareentwicklung" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mohammad Al Hallak — Full-Stack- & Backend-Entwickler" />
+  <meta property="og:description" content="Full-Stack- und Backend-Entwicklung, Datenanalyse sowie Security-nahe Softwarelösungen." />
+  <meta property="og:url" content="https://moalhallak.github.io/" />
+  <meta property="og:image" content="https://moalhallak.github.io/assets/profile-placeholder.svg" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mohammad Al Hallak — Full-Stack- & Backend-Entwickler" />
+  <meta name="twitter:description" content="Full-Stack- und Backend-Entwicklung, Datenanalyse sowie Security-nahe Softwarelösungen." />
+  <meta name="twitter:image" content="https://moalhallak.github.io/assets/profile-placeholder.svg" />
+
+  <link rel="canonical" href="https://moalhallak.github.io/" />
+  <link rel="icon" href="assets/profile-placeholder.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!--
+    Frühzeitige Initialisierung von Theme (hell/dunkel) und Leserichtung.
+    Läuft VOR dem Rendern, damit es kein Aufblitzen (FOUC) gibt.
+    Die eigentliche Logik liegt in script.js.
+  -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("portfolio-theme");
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+
+        var l = localStorage.getItem("portfolio-lang");
+        if (l === "ar") {
+          document.documentElement.setAttribute("dir", "rtl");
+          document.documentElement.setAttribute("lang", "ar");
+        }
+      } catch (e) { /* localStorage nicht verfügbar – Standard (dunkel) bleibt */ }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Skip-Link für Tastaturnutzer -->
+  <a class="skip-link" href="#main" data-i18n="skip_link">Zum Inhalt springen</a>
+
+  <!-- =========================================================
+       FIXIERTE NAVIGATION
+  ========================================================== -->
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="#top" class="nav__brand" aria-label="Startseite Mohammad Al Hallak">
+        <span class="nav__brand-mark" aria-hidden="true">MA</span>
+        <span class="nav__brand-text">Mohammad Al Hallak</span>
+      </a>
+
+      <!-- Mobiler Menü-Button (Burger) -->
+      <button
+        class="nav__toggle"
+        id="navToggle"
+        aria-expanded="false"
+        aria-controls="navMenu"
+        aria-label="Menü öffnen"
+      >
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <ul class="nav__links">
+          <li><a href="#hero" data-i18n="nav_start">Start</a></li>
+          <li><a href="#about" data-i18n="nav_about">Über mich</a></li>
+          <li><a href="#experience" data-i18n="nav_experience">Erfahrung</a></li>
+          <li><a href="#projects" data-i18n="nav_projects">Projekte</a></li>
+          <li><a href="#tech" data-i18n="nav_tech">Technologien</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Kontakt</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <!-- Sprachumschalter DE | EN | AR -->
+          <div class="lang-switch" role="group" aria-label="Sprache wählen / Choose language / اختيار اللغة">
+            <button type="button" class="lang-switch__btn" data-lang="de" aria-pressed="true">DE</button>
+            <span class="lang-switch__sep" aria-hidden="true">|</span>
+            <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+            <span class="lang-switch__sep" aria-hidden="true">|</span>
+            <button type="button" class="lang-switch__btn" data-lang="ar" aria-pressed="false" lang="ar">AR</button>
+          </div>
+
+          <!-- Umschalter Hell-/Dunkelmodus -->
+          <button type="button" class="theme-toggle" id="themeToggle" aria-label="Zu hellem Modus wechseln" aria-pressed="false" title="Design wechseln">
+            <svg class="theme-toggle__icon theme-toggle__sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+              <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4" />
+              </g>
+            </svg>
+            <svg class="theme-toggle__icon theme-toggle__moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+            </svg>
+          </button>
+
+          <!-- GitHub -->
+          <a
+            class="icon-link"
+            href="https://github.com/MoAlhallak"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub-Profil (öffnet in neuem Tab)"
+          >
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.15v3.18c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/>
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            class="icon-link"
+            href="https://www.linkedin.com/in/mohammad-al-hallak-97b40b334"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn-Profil (öffnet in neuem Tab)"
+          >
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- =========================================================
+         1. HERO
+    ========================================================== -->
+    <section class="hero section" id="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="hero__eyebrow" data-i18n="hero_eyebrow">B.Sc. Informatik · M.Sc.-Student Internet-Sicherheit</p>
+          <h1 class="hero__title" id="hero-title" data-i18n="hero_title">Hallo, ich bin Mohammad Al Hallak.</h1>
+          <p class="hero__subtitle" data-i18n="hero_subtitle">Full-Stack- und Backend-Entwicklung, Datenanalyse sowie Security-nahe Softwarelösungen.</p>
+          <p class="hero__text" data-i18n="hero_text">Ich verbinde mehrjährige praktische Erfahrung in der Datenanalyse mit Full-Stack-Entwicklung, Backend-Technologien und IT-Sicherheit. Mein Schwerpunkt liegt auf strukturierten, datengetriebenen und technisch nachvollziehbaren Softwarelösungen.</p>
+
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary" data-i18n="hero_btn_projects">Projekte ansehen</a>
+            <a href="https://github.com/MoAlhallak" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.15v3.18c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/mohammad-al-hallak-97b40b334" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg>
+              LinkedIn
+            </a>
+            <a href="#contact" class="btn btn--ghost" data-i18n="hero_btn_contact">Kontakt</a>
+          </div>
+        </div>
+
+        <div class="hero__media reveal">
+          <div class="profile-card">
+            <!--
+              Profilfoto. Fällt automatisch auf den „MA“-Platzhalter zurück,
+              falls die Datei (noch) nicht vorhanden ist (siehe script.js).
+            -->
+            <img
+              src="assets/profile.jpg"
+              data-fallback="assets/profile-placeholder.svg"
+              alt="Porträtfoto von Mohammad Al Hallak"
+              class="profile-card__img"
+              width="320"
+              height="400"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         2. ÜBER MICH
+    ========================================================== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <p class="section__kicker" data-i18n="about_kicker">Profil</p>
+        <h2 class="section__title" id="about-title" data-i18n="about_title">Über mich</h2>
+
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <p data-i18n="about_p1">Ich habe meinen Bachelor of Science in Informatik an der Westfälischen Hochschule abgeschlossen und studiere aktuell im Masterstudiengang Internet-Sicherheit.</p>
+            <p data-i18n="about_p2">Meine praktischen Schwerpunkte liegen in der Full-Stack- und Backend-Entwicklung, Datenanalyse, technischen Automatisierung und Security-nahen Softwareentwicklung.</p>
+            <p data-i18n="about_p3">Als Werkstudent bei Adecco sammelte ich mehrjährige Erfahrung in KPI-Analysen, Reporting, Data Quality Management und der Automatisierung wiederkehrender Auswertungen.</p>
+            <p data-i18n="about_p4">Zusätzlich verfüge ich über Projekterfahrung mit Java, Spring Boot, Python, FastAPI, PostgreSQL, REST APIs, JavaScript, Tailwind CSS, Docker sowie SQL- und NoSQL-Datenbanken.</p>
+          </div>
+
+          <ul class="stats reveal" aria-label="Kennzahlen">
+            <li class="stat">
+              <span class="stat__value">B.Sc.</span>
+              <span class="stat__label" data-i18n="stat_bsc">Informatik</span>
+            </li>
+            <li class="stat">
+              <span class="stat__value">M.Sc.</span>
+              <span class="stat__label" data-i18n="stat_msc">Internet-Sicherheit</span>
+            </li>
+            <li class="stat">
+              <span class="stat__value">3+</span>
+              <span class="stat__label" data-i18n="stat_data">Jahre Data-Erfahrung</span>
+            </li>
+            <li class="stat">
+              <span class="stat__value">4</span>
+              <span class="stat__label" data-i18n="stat_projects">ausgewählte Projekte</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. ERFAHRUNG (Timeline)
+    ========================================================== -->
+    <section class="section section--alt" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <p class="section__kicker" data-i18n="exp_kicker">Werdegang</p>
+        <h2 class="section__title" id="experience-title" data-i18n="exp_title">Erfahrung</h2>
+
+        <ol class="timeline">
+          <!-- A -->
+          <li class="timeline__item reveal">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <span class="timeline__date" data-i18n="exp_a_date">März 2026 – Mai 2026</span>
+              <h3 class="timeline__role" data-i18n="exp_a_role">Bachelorarbeit – Datenbasierte IT-Sicherheitsnomenklatur &amp; Knowledge Graphs</h3>
+              <p class="timeline__org" data-i18n="exp_a_org">Institut für Internet-Sicherheit – if(is)</p>
+              <ul class="timeline__list">
+                <li data-i18n="exp_a_1">Analyse und Bewertung von 723 IT-Sicherheitsbegriffen</li>
+                <li data-i18n="exp_a_2">Auswahl von 470 Kernbegriffen in 18 Kategorien</li>
+                <li data-i18n="exp_a_3">Entwicklung eines gewichteten Bewertungsmodells</li>
+                <li data-i18n="exp_a_4">Strukturierung von Begriffen, Kategorien, Synonymen und Beziehungen</li>
+                <li data-i18n="exp_a_5">Entwicklung interaktiver Knowledge-Graph- und Beziehungsgraph-Prototypen</li>
+                <li data-i18n="exp_a_6">Entwicklung eines Empfehlungsassistenten und eines Umfrage-Tools</li>
+                <li data-i18n="exp_a_7">Durchführung und Auswertung einer Umfrage mit 103 Teilnehmenden</li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- B -->
+          <li class="timeline__item reveal">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <span class="timeline__date" data-i18n="exp_b_date">Mai 2025 – Februar 2026</span>
+              <h3 class="timeline__role" data-i18n="exp_b_role">Full-Stack-Entwicklung – Nachbar365</h3>
+              <p class="timeline__org" data-i18n="exp_b_org">Westfälische Hochschule</p>
+              <ul class="timeline__list">
+                <li data-i18n="exp_b_1">Full-Stack-Webanwendung in einem achtköpfigen Projektteam</li>
+                <li data-i18n="exp_b_2">Backend mit Java, Spring Boot, PostgreSQL und REST APIs</li>
+                <li data-i18n="exp_b_3">Frontend mit JavaScript, HTML, CSS und Tailwind CSS</li>
+                <li data-i18n="exp_b_4">JWT-Authentifizierung</li>
+                <li data-i18n="exp_b_5">Zwei-Faktor-Authentifizierung</li>
+                <li data-i18n="exp_b_6">Rollenbasierte Zugriffskontrolle</li>
+                <li data-i18n="exp_b_7">Softwaretests und Git-basierte Zusammenarbeit</li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- C -->
+          <li class="timeline__item reveal">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <span class="timeline__date" data-i18n="exp_c_date">Juni 2023 – Dezember 2025</span>
+              <h3 class="timeline__role" data-i18n="exp_c_role">Werkstudent – Datenanalyse &amp; Reporting</h3>
+              <p class="timeline__org" data-i18n="exp_c_org">Adecco</p>
+              <ul class="timeline__list">
+                <li data-i18n="exp_c_1">KPI- und Performance-Analysen</li>
+                <li data-i18n="exp_c_2">Reports für Management und Kunden</li>
+                <li data-i18n="exp_c_3">Excel und Tableau</li>
+                <li data-i18n="exp_c_4">Data Quality Management</li>
+                <li data-i18n="exp_c_5">Ad-hoc-Analysen</li>
+                <li data-i18n="exp_c_6">Automatisierung wiederkehrender Aufgaben mit VBA und Makros</li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- D -->
+          <li class="timeline__item reveal">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <span class="timeline__date" data-i18n="exp_d_date">August 2025 – November 2025</span>
+              <h3 class="timeline__role" data-i18n="exp_d_role">Praxisphase – IT-Sicherheit und Datenanalyse</h3>
+              <p class="timeline__org" data-i18n="exp_d_org">Institut für Internet-Sicherheit – if(is)</p>
+              <ul class="timeline__list">
+                <li data-i18n="exp_d_1">Entwicklung eines Python-Skripts zur automatisierten Datenerfassung</li>
+                <li data-i18n="exp_d_2">Nutzung der GitHub REST API</li>
+                <li data-i18n="exp_d_3">Analyse und Klassifikation von Repository-Tags mit Regex</li>
+                <li data-i18n="exp_d_4">Bereinigung, Strukturierung und Auswertung der Daten</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. PROJEKTE
+    ========================================================== -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <p class="section__kicker" data-i18n="proj_kicker">Auswahl</p>
+        <h2 class="section__title" id="projects-title" data-i18n="proj_title">Projekte</h2>
+
+        <div class="projects">
+          <!-- Projekt 1 -->
+          <article class="project reveal">
+            <div class="project__head">
+              <h3 class="project__title">AI Research Design Assistant</h3>
+              <span class="badge badge--featured" data-i18n="proj_featured">Featured Project</span>
+            </div>
+            <p class="project__desc" data-i18n="proj_1_desc">KI-gestützte Anwendung zur Recherche und Analyse wissenschaftlicher Publikationen. Die Anwendung unterstützt Live-arXiv-Suche, PDF-RAG, OCR, semantisches Dokumenten-Retrieval sowie belegbare Antworten mit Quellenangaben.</p>
+            <ul class="tags">
+              <li class="tag">Python</li>
+              <li class="tag">Streamlit</li>
+              <li class="tag">LangChain</li>
+              <li class="tag">ChromaDB</li>
+              <li class="tag">Pydantic</li>
+              <li class="tag">PDF-RAG</li>
+              <li class="tag">OCR</li>
+              <li class="tag">Docker</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/MoAlhallak/ai-research-design-assistant" class="btn btn--small" target="_blank" rel="noopener noreferrer" aria-label="AI Research Design Assistant auf GitHub (öffnet in neuem Tab)">GitHub</a>
+            </div>
+          </article>
+
+          <!-- Projekt 2 -->
+          <article class="project reveal">
+            <div class="project__head">
+              <h3 class="project__title">Nachbar365</h3>
+            </div>
+            <p class="project__desc" data-i18n="proj_2_desc">Full-Stack-Webanwendung für digitale Nachbarschaftshilfe, entwickelt in einem achtköpfigen Hochschulteam. Mitarbeit an Backend, Frontend, Datenbankintegration, Authentifizierung, REST-Kommunikation und Softwaretests.</p>
+            <ul class="tags">
+              <li class="tag">Java 21</li>
+              <li class="tag">Spring Boot</li>
+              <li class="tag">PostgreSQL</li>
+              <li class="tag">REST APIs</li>
+              <li class="tag">JWT</li>
+              <li class="tag">RBAC</li>
+              <li class="tag">JavaScript</li>
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+              <li class="tag">Tailwind CSS</li>
+              <li class="tag">JUnit</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/MoAlhallak/nachbar365-showcase" class="btn btn--small" target="_blank" rel="noopener noreferrer" aria-label="Nachbar365 auf GitHub (öffnet in neuem Tab)">GitHub</a>
+            </div>
+          </article>
+
+          <!-- Projekt 3 -->
+          <article class="project reveal">
+            <div class="project__head">
+              <h3 class="project__title">GitHub Tag Analyzer / SecuSeek</h3>
+            </div>
+            <p class="project__desc" data-i18n="proj_3_desc">Python-Anwendung zur automatisierten Erfassung, Analyse und Klassifikation von GitHub-Tags und Releases im Rahmen eines Forschungsprojekts am Institut für Internet-Sicherheit.</p>
+            <ul class="tags">
+              <li class="tag">Python</li>
+              <li class="tag">GitHub REST API</li>
+              <li class="tag">JSON</li>
+              <li class="tag">Regex</li>
+              <li class="tag" data-i18n="tag_data_analysis">Datenanalyse</li>
+              <li class="tag">Automation</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/MoAlhallak/github-tag-analyzer" class="btn btn--small" target="_blank" rel="noopener noreferrer" aria-label="GitHub Tag Analyzer auf GitHub (öffnet in neuem Tab)">GitHub</a>
+            </div>
+          </article>
+
+          <!-- Projekt 4 -->
+          <article class="project reveal">
+            <div class="project__head">
+              <h3 class="project__title">Cybersecurity Terminology &amp; Knowledge Graphs</h3>
+            </div>
+            <p class="project__desc" data-i18n="proj_4_desc">Datenbasierte Analyse von 723 IT-Sicherheitsbegriffen, Auswahl von 470 Kernbegriffen in 18 Kategorien und Entwicklung interaktiver Knowledge-Graph- und Beziehungsgraph-Prototypen.</p>
+            <ul class="tags">
+              <li class="tag">Cybersecurity</li>
+              <li class="tag">Data Analysis</li>
+              <li class="tag">Knowledge Graphs</li>
+              <li class="tag" data-i18n="tag_data_modeling">Datenmodellierung</li>
+              <li class="tag" data-i18n="tag_data_viz">Datenvisualisierung</li>
+              <li class="tag">JavaScript</li>
+              <li class="tag">D3.js</li>
+            </ul>
+            <div class="project__links">
+              <span class="btn btn--small btn--disabled" aria-disabled="true" title="Case Study / Bachelorarbeit" data-i18n="proj_4_label">Case Study / Bachelorarbeit</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. TECHNOLOGIEN
+    ========================================================== -->
+    <section class="section section--alt" id="tech" aria-labelledby="tech-title">
+      <div class="container">
+        <p class="section__kicker" data-i18n="tech_kicker">Werkzeuge</p>
+        <h2 class="section__title" id="tech-title" data-i18n="tech_title">Technologien</h2>
+
+        <div class="tech-grid">
+          <div class="tech-card reveal">
+            <h3 class="tech-card__title" data-i18n="tech_backend">Backend</h3>
+            <ul class="chips">
+              <li class="chip">Java</li>
+              <li class="chip">Spring Boot</li>
+              <li class="chip">Python</li>
+              <li class="chip">FastAPI</li>
+              <li class="chip">REST APIs</li>
+              <li class="chip">JPA / Hibernate</li>
+            </ul>
+          </div>
+
+          <div class="tech-card reveal">
+            <h3 class="tech-card__title" data-i18n="tech_databases">Datenbanken</h3>
+            <ul class="chips">
+              <li class="chip">PostgreSQL</li>
+              <li class="chip">MySQL</li>
+              <li class="chip">MongoDB</li>
+              <li class="chip">Neo4j</li>
+              <li class="chip">Redis</li>
+              <li class="chip">SQL / NoSQL</li>
+            </ul>
+          </div>
+
+          <div class="tech-card reveal">
+            <h3 class="tech-card__title" data-i18n="tech_frontend">Frontend</h3>
+            <ul class="chips">
+              <li class="chip">JavaScript</li>
+              <li class="chip">HTML</li>
+              <li class="chip">CSS</li>
+              <li class="chip">Tailwind CSS</li>
+            </ul>
+          </div>
+
+          <div class="tech-card reveal">
+            <h3 class="tech-card__title" data-i18n="tech_data_ai">Data &amp; AI</h3>
+            <ul class="chips">
+              <li class="chip" data-i18n="chip_data_analysis">Data Analysis</li>
+              <li class="chip">Streamlit</li>
+              <li class="chip">LangChain</li>
+              <li class="chip">ChromaDB</li>
+              <li class="chip">PDF-RAG</li>
+              <li class="chip">Excel</li>
+              <li class="chip">Tableau</li>
+              <li class="chip">VBA</li>
+            </ul>
+          </div>
+
+          <div class="tech-card reveal">
+            <h3 class="tech-card__title" data-i18n="tech_tools">Tools &amp; Methoden</h3>
+            <ul class="chips">
+              <li class="chip">Git</li>
+              <li class="chip">GitHub</li>
+              <li class="chip">Docker</li>
+              <li class="chip">Maven</li>
+              <li class="chip">JUnit</li>
+              <li class="chip">JWT</li>
+              <li class="chip">RBAC</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. KONTAKT
+    ========================================================== -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact">
+        <p class="section__kicker" data-i18n="contact_kicker">Kontakt</p>
+        <h2 class="section__title" id="contact-title" data-i18n="contact_title">Lassen Sie uns vernetzen.</h2>
+        <p class="contact__lead reveal" data-i18n="contact_lead">Ich interessiere mich für Positionen und Projekte in den Bereichen Full-Stack- und Backend-Entwicklung, Datenanalyse, Data Automation sowie Security-nahe Softwareentwicklung.</p>
+
+        <div class="contact__cards">
+          <a class="contact-card reveal" href="mailto:mohammedalhallak99@gmail.com">
+            <span class="contact-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm10 7.4 8-5.2V5H4v1.2l8 5.2Zm0 2.4L4 8.5V19h16V8.5l-8 5.3Z"/></svg>
+            </span>
+            <span class="contact-card__label" data-i18n="contact_email">E-Mail</span>
+            <span class="contact-card__value">mohammedalhallak99@gmail.com</span>
+          </a>
+
+          <a class="contact-card reveal" href="https://github.com/MoAlhallak" target="_blank" rel="noopener noreferrer" aria-label="GitHub-Profil (öffnet in neuem Tab)">
+            <span class="contact-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.15v3.18c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+            </span>
+            <span class="contact-card__label">GitHub</span>
+            <span class="contact-card__value">github.com/MoAlhallak</span>
+          </a>
+
+          <a class="contact-card reveal" href="https://www.linkedin.com/in/mohammad-al-hallak-97b40b334" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn-Profil (öffnet in neuem Tab)">
+            <span class="contact-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg>
+            </span>
+            <span class="contact-card__label">LinkedIn</span>
+            <span class="contact-card__value">mohammad-al-hallak</span>
+          </a>
+
+          <div class="contact-card contact-card--static reveal">
+            <span class="contact-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 4.6 6.1 12.3 6.36 12.63a.82.82 0 0 0 1.28 0C12.9 21.3 19 13.6 19 9a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+            </span>
+            <span class="contact-card__label" data-i18n="contact_location">Standort</span>
+            <span class="contact-card__value">Velbert, Nordrhein-Westfalen</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       7. FOOTER
+  ========================================================== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__name">Mohammad Al Hallak</p>
+
+      <nav class="site-footer__links" aria-label="Footer-Links">
+        <a href="https://github.com/MoAlhallak" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/mohammad-al-hallak-97b40b334" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </nav>
+
+      <p class="site-footer__meta">
+        <span>&copy; <span id="year">2026</span> Mohammad Al Hallak</span>
+        <span class="site-footer__privacy" data-i18n="footer_privacy">Diese Website verwendet keine Tracking- oder Analyse-Cookies.</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
