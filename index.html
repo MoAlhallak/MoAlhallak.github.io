@@ -9,14 +9,15 @@
   <meta name="description" content="Portfolio von Mohammad Al Hallak, B.Sc. Informatik und M.Sc.-Student Internet-Sicherheit. Schwerpunkte: Full-Stack- und Backend-Entwicklung, Datenanalyse und Security-nahe Softwarelösungen." />
   <meta name="author" content="Mohammad Al Hallak" />
   <meta name="keywords" content="Mohammad Al Hallak, Full-Stack, Backend, Java, Spring Boot, Python, Datenanalyse, IT-Sicherheit, Portfolio, Softwareentwicklung" />
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="color-scheme" content="light dark" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Mohammad Al Hallak — Full-Stack- & Backend-Entwickler" />
   <meta property="og:description" content="Full-Stack- und Backend-Entwicklung, Datenanalyse sowie Security-nahe Softwarelösungen." />
   <meta property="og:url" content="https://moalhallak.github.io/" />
-  <meta property="og:image" content="https://moalhallak.github.io/assets/profile-placeholder.svg" />
+  <meta property="og:image" content="https://moalhallak.github.io/assets/profile.jpg" />
   <meta property="og:locale" content="de_DE" />
   <meta property="og:locale:alternate" content="en_US" />
 
@@ -24,7 +25,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Mohammad Al Hallak — Full-Stack- & Backend-Entwickler" />
   <meta name="twitter:description" content="Full-Stack- und Backend-Entwicklung, Datenanalyse sowie Security-nahe Softwarelösungen." />
-  <meta name="twitter:image" content="https://moalhallak.github.io/assets/profile-placeholder.svg" />
+  <meta name="twitter:image" content="https://moalhallak.github.io/assets/profile.jpg" />
 
   <link rel="canonical" href="https://moalhallak.github.io/" />
   <link rel="icon" href="assets/profile-placeholder.svg" type="image/svg+xml" />
@@ -39,9 +40,7 @@
     (function () {
       try {
         var t = localStorage.getItem("portfolio-theme");
-        if (t !== "light" && t !== "dark") {
-          t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-        }
+        if (t !== "light" && t !== "dark") t = "light";
         document.documentElement.setAttribute("data-theme", t);
 
         var l = localStorage.getItem("portfolio-lang");
@@ -151,26 +150,39 @@
       <div class="container hero__grid">
         <div class="hero__content reveal">
           <p class="hero__eyebrow" data-i18n="hero_eyebrow">B.Sc. Informatik · M.Sc.-Student Internet-Sicherheit</p>
-          <h1 class="hero__title" id="hero-title" data-i18n="hero_title">Hallo, ich bin Mohammad Al Hallak.</h1>
+          <h1 class="hero__title" id="hero-title" aria-label="Mohammad Al Hallak">
+            <span class="hero__title-outline">Mohammad</span>
+            <span class="hero__title-solid">Al Hallak</span>
+          </h1>
           <p class="hero__subtitle" data-i18n="hero_subtitle">Full-Stack- und Backend-Entwicklung, Datenanalyse sowie Security-nahe Softwarelösungen.</p>
           <p class="hero__text" data-i18n="hero_text">Ich verbinde mehrjährige praktische Erfahrung in der Datenanalyse mit Full-Stack-Entwicklung, Backend-Technologien und IT-Sicherheit. Mein Schwerpunkt liegt auf strukturierten, datengetriebenen und technisch nachvollziehbaren Softwarelösungen.</p>
 
-          <div class="hero__actions">
+          <ul class="hero__roles" aria-label="Schwerpunkte">
+            <li>Full-Stack</li>
+            <li>Backend</li>
+            <li>Data &amp; Security</li>
+          </ul>
+
+          <div class="hero__cta">
             <a href="#projects" class="btn btn--primary" data-i18n="hero_btn_projects">Projekte ansehen</a>
-            <a href="https://github.com/MoAlhallak" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.15v3.18c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
-              GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/mohammad-al-hallak-97b40b334" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg>
-              LinkedIn
-            </a>
             <a href="#contact" class="btn btn--ghost" data-i18n="hero_btn_contact">Kontakt</a>
+          </div>
+
+          <div class="hero__socials" aria-label="Social Media">
+            <a href="https://github.com/MoAlhallak" class="hero__social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub-Profil">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.15v3.18c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/mohammad-al-hallak-97b40b334" class="hero__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn-Profil">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg>
+            </a>
           </div>
         </div>
 
         <div class="hero__media reveal">
-          <div class="profile-card">
+          <div class="profile-scene">
+            <span class="profile-scene__shape profile-scene__shape--one" aria-hidden="true"></span>
+            <span class="profile-scene__shape profile-scene__shape--two" aria-hidden="true"></span>
+            <div class="profile-card">
             <!--
               Profilfoto. Fällt automatisch auf den „MA“-Platzhalter zurück,
               falls die Datei (noch) nicht vorhanden ist (siehe script.js).
@@ -183,6 +195,11 @@
               width="320"
               height="400"
             />
+            </div>
+            <span class="profile-orbit profile-orbit--code" aria-hidden="true">&lt;/&gt;</span>
+            <span class="profile-orbit profile-orbit--api" aria-hidden="true">API</span>
+            <span class="profile-orbit profile-orbit--db" aria-hidden="true">DB</span>
+            <span class="profile-scene__note">Full-Stack<br /><strong>&amp; Security</strong></span>
           </div>
         </div>
       </div>
@@ -197,31 +214,51 @@
         <h2 class="section__title" id="about-title" data-i18n="about_title">Über mich</h2>
 
         <div class="about__grid">
-          <div class="about__text reveal">
-            <p data-i18n="about_p1">Ich habe meinen Bachelor of Science in Informatik an der Westfälischen Hochschule abgeschlossen und studiere aktuell im Masterstudiengang Internet-Sicherheit.</p>
-            <p data-i18n="about_p2">Meine praktischen Schwerpunkte liegen in der Full-Stack- und Backend-Entwicklung, Datenanalyse, technischen Automatisierung und Security-nahen Softwareentwicklung.</p>
-            <p data-i18n="about_p3">Als Werkstudent bei Adecco sammelte ich mehrjährige Erfahrung in KPI-Analysen, Reporting, Data Quality Management und der Automatisierung wiederkehrender Auswertungen.</p>
-            <p data-i18n="about_p4">Zusätzlich verfüge ich über Projekterfahrung mit Java, Spring Boot, Python, FastAPI, PostgreSQL, REST APIs, JavaScript, Tailwind CSS, Docker sowie SQL- und NoSQL-Datenbanken.</p>
-          </div>
+          <figure class="about__visual reveal">
+            <div class="about__visual-frame">
+              <img
+                src="assets/profile.jpg"
+                data-fallback="assets/profile-placeholder.svg"
+                alt="Mohammad Al Hallak"
+                class="about__visual-img"
+                width="640"
+                height="820"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="about__visual-note">
+              <strong>3+</strong>
+              <span data-i18n="stat_data">Jahre Data-Erfahrung</span>
+            </figcaption>
+          </figure>
 
-          <ul class="stats reveal" aria-label="Kennzahlen">
-            <li class="stat">
-              <span class="stat__value">B.Sc.</span>
-              <span class="stat__label" data-i18n="stat_bsc">Informatik</span>
-            </li>
-            <li class="stat">
-              <span class="stat__value">M.Sc.</span>
-              <span class="stat__label" data-i18n="stat_msc">Internet-Sicherheit</span>
-            </li>
-            <li class="stat">
-              <span class="stat__value">3+</span>
-              <span class="stat__label" data-i18n="stat_data">Jahre Data-Erfahrung</span>
-            </li>
-            <li class="stat">
-              <span class="stat__value">4</span>
-              <span class="stat__label" data-i18n="stat_projects">ausgewählte Projekte</span>
-            </li>
-          </ul>
+          <div class="about__content">
+            <div class="about__text reveal">
+              <p data-i18n="about_p1">Ich habe meinen Bachelor of Science in Informatik an der Westfälischen Hochschule abgeschlossen und studiere aktuell im Masterstudiengang Internet-Sicherheit.</p>
+              <p data-i18n="about_p2">Meine praktischen Schwerpunkte liegen in der Full-Stack- und Backend-Entwicklung, Datenanalyse, technischen Automatisierung und Security-nahen Softwareentwicklung.</p>
+              <p data-i18n="about_p3">Als Werkstudent bei Adecco sammelte ich mehrjährige Erfahrung in KPI-Analysen, Reporting, Data Quality Management und der Automatisierung wiederkehrender Auswertungen.</p>
+              <p data-i18n="about_p4">Zusätzlich verfüge ich über Projekterfahrung mit Java, Spring Boot, Python, FastAPI, PostgreSQL, REST APIs, JavaScript, Tailwind CSS, Docker sowie SQL- und NoSQL-Datenbanken.</p>
+            </div>
+
+            <ul class="stats reveal" aria-label="Kennzahlen">
+              <li class="stat">
+                <span class="stat__value">B.Sc.</span>
+                <span class="stat__label" data-i18n="stat_bsc">Informatik</span>
+              </li>
+              <li class="stat">
+                <span class="stat__value">M.Sc.</span>
+                <span class="stat__label" data-i18n="stat_msc">Internet-Sicherheit</span>
+              </li>
+              <li class="stat">
+                <span class="stat__value">3+</span>
+                <span class="stat__label" data-i18n="stat_data">Jahre Data-Erfahrung</span>
+              </li>
+              <li class="stat">
+                <span class="stat__value">4</span>
+                <span class="stat__label" data-i18n="stat_projects">ausgewählte Projekte</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
