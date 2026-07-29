@@ -29,7 +29,7 @@
 
   <link rel="canonical" href="https://moalhallak.github.io/" />
   <link rel="icon" href="assets/profile-placeholder.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260728-redesign" />
+  <link rel="stylesheet" href="styles.css?v=20260729-profile-details" />
 
   <!--
     Frühzeitige Initialisierung von Theme (hell/dunkel) und Leserichtung.
@@ -260,6 +260,44 @@
             </ul>
           </div>
         </div>
+
+        <div class="profile-details" id="profile-details">
+          <article class="profile-detail-card reveal">
+            <div class="profile-detail-card__head">
+              <span class="profile-detail-card__number" aria-hidden="true">01</span>
+              <h3 class="profile-detail-card__title" data-i18n="languages_title">Sprachen</h3>
+            </div>
+
+            <ul class="language-list">
+              <li>
+                <span data-i18n="language_arabic">Arabisch</span>
+                <strong data-i18n="language_arabic_level">Muttersprache</strong>
+              </li>
+              <li>
+                <span data-i18n="language_german">Deutsch</span>
+                <strong>C1</strong>
+              </li>
+              <li>
+                <span data-i18n="language_english">Englisch</span>
+                <strong>B2</strong>
+              </li>
+            </ul>
+          </article>
+
+          <article class="profile-detail-card profile-detail-card--work reveal">
+            <div class="profile-detail-card__head">
+              <span class="profile-detail-card__number" aria-hidden="true">02</span>
+              <h3 class="profile-detail-card__title" data-i18n="work_style_title">Arbeitsweise</h3>
+            </div>
+
+            <ul class="work-style-list">
+              <li data-i18n="work_style_1">Systematische Analyse von Anforderungen und Fehlerbildern</li>
+              <li data-i18n="work_style_2">Strukturierte Dokumentation technischer Ergebnisse</li>
+              <li data-i18n="work_style_3">Qualitätsorientiertes und zuverlässiges Arbeiten</li>
+              <li data-i18n="work_style_4">Schnelle Einarbeitung in neue Tools und Testmethoden</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -272,6 +310,23 @@
         <h2 class="section__title" id="experience-title" data-i18n="exp_title">Erfahrung</h2>
 
         <ol class="timeline">
+          <!-- Master -->
+          <li class="timeline__item reveal" id="master-study">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <span class="timeline__date" data-i18n="exp_m_date">Seit März 2026</span>
+              <h3 class="timeline__role" data-i18n="exp_m_role">M.Sc. Internet-Sicherheit</h3>
+              <p class="timeline__org" data-i18n="exp_m_org">Westfälische Hochschule</p>
+              <ul class="timeline__list">
+                <li data-i18n="exp_m_1">Software Testing</li>
+                <li data-i18n="exp_m_2">Qualitätssicherung</li>
+                <li data-i18n="exp_m_3">Cybersecurity</li>
+                <li data-i18n="exp_m_4">Sichere Softwareentwicklung</li>
+                <li data-i18n="exp_m_5">Datenschutz</li>
+              </ul>
+            </div>
+          </li>
+
           <!-- A -->
           <li class="timeline__item reveal">
             <div class="timeline__marker" aria-hidden="true"></div>
@@ -582,6 +637,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20260728-first-person"></script>
+  <script src="script.js?v=20260729-profile-details"></script>
 </body>
 </html>
