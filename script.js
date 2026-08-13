@@ -29,8 +29,8 @@
 
       hero_eyebrow: "B.Sc. Informatik · M.Sc.-Student Internet-Sicherheit",
       hero_title: "Hallo, ich bin Mohammad Al Hallak.",
-      hero_subtitle: "Software Testing, Full-Stack- und Backend-Entwicklung, Datenanalyse sowie Security-nahe Softwarelösungen.",
-      hero_text: "Ich verbinde Kenntnisse in Software Testing und Qualitätssicherung mit mehrjähriger praktischer Erfahrung in Datenanalyse, Full-Stack-Entwicklung, Backend-Technologien und IT-Sicherheit. Mein Schwerpunkt liegt auf strukturierten, datengetriebenen und technisch nachvollziehbaren Softwarelösungen.",
+      hero_subtitle: "Software Testing, Full-Stack-Entwicklung, Datenanalyse sowie Security-nahe Softwarelösungen.",
+      hero_text: "Ich verbinde Kenntnisse in Software Testing und Qualitätssicherung mit mehrjähriger praktischer Erfahrung in Datenanalyse, Full-Stack-Entwicklung und IT-Sicherheit. Mein Schwerpunkt liegt auf strukturierten, datengetriebenen und technisch nachvollziehbaren Softwarelösungen.",
       hero_role_testing: "Software Tester",
       hero_btn_projects: "Projekte ansehen",
       hero_btn_contact: "Kontakt",
@@ -38,7 +38,7 @@
       about_kicker: "Profil",
       about_title: "Über mich",
       about_p1: "Ich habe meinen Bachelor of Science in Informatik an der Westfälischen Hochschule abgeschlossen und studiere aktuell im Masterstudiengang Internet-Sicherheit.",
-      about_p2: "Meine praktischen Schwerpunkte liegen in Software Testing und Qualitätssicherung, Full-Stack- und Backend-Entwicklung, Datenanalyse, technischer Automatisierung und Security-naher Softwareentwicklung.",
+      about_p2: "Meine praktischen Schwerpunkte liegen in Software Testing und Qualitätssicherung, Full-Stack-Entwicklung, Datenanalyse, technischer Automatisierung und Security-naher Softwareentwicklung.",
       about_p3: "Als Werkstudent bei Adecco habe ich mehrjährige Erfahrung in KPI-Analysen, Reporting, Data Quality Management und der Automatisierung wiederkehrender Auswertungen gesammelt.",
       about_p4: "Zusätzlich habe ich Projekterfahrung mit Java, Spring Boot, Python, FastAPI, PostgreSQL, REST APIs, JavaScript, Tailwind CSS, Docker sowie SQL- und NoSQL-Datenbanken.",
       stat_bsc: "Informatik",
@@ -143,7 +143,7 @@
 
       contact_kicker: "Kontakt",
       contact_title: "Lassen Sie uns vernetzen.",
-      contact_lead: "Ich interessiere mich für Positionen und Projekte in den Bereichen Software Testing und Qualitätssicherung, Full-Stack- und Backend-Entwicklung, Datenanalyse, Data Automation sowie Security-nahe Softwareentwicklung.",
+      contact_lead: "Ich interessiere mich für Positionen und Projekte in den Bereichen Software Testing und Qualitätssicherung, Full-Stack-Entwicklung, Datenanalyse, Data Automation sowie Security-nahe Softwareentwicklung.",
       contact_email: "E-Mail",
       contact_location: "Standort",
 
@@ -162,8 +162,8 @@
 
       hero_eyebrow: "B.Sc. Computer Science · M.Sc. Student Internet Security",
       hero_title: "Hi, I'm Mohammad Al Hallak.",
-      hero_subtitle: "Software testing, full-stack and backend development, data analysis and security-oriented software solutions.",
-      hero_text: "I combine knowledge of software testing and quality assurance with several years of hands-on experience in data analysis, full-stack development, backend technologies and IT security. My focus is on structured, data-driven and technically transparent software solutions.",
+      hero_subtitle: "Software testing, full-stack development, data analysis and security-oriented software solutions.",
+      hero_text: "I combine knowledge of software testing and quality assurance with several years of hands-on experience in data analysis, full-stack development and IT security. My focus is on structured, data-driven and technically transparent software solutions.",
       hero_role_testing: "Software Tester",
       hero_btn_projects: "View projects",
       hero_btn_contact: "Contact",
@@ -171,7 +171,7 @@
       about_kicker: "Profile",
       about_title: "About me",
       about_p1: "I completed my Bachelor of Science in Computer Science at Westphalian University of Applied Sciences and am currently studying in the Internet Security master's programme.",
-      about_p2: "My practical focus lies in software testing and quality assurance, full-stack and backend development, data analysis, technical automation and security-oriented software development.",
+      about_p2: "My practical focus lies in software testing and quality assurance, full-stack development, data analysis, technical automation and security-oriented software development.",
       about_p3: "As a working student at Adecco, I gained several years of experience in KPI analysis, reporting, data quality management and the automation of recurring evaluations.",
       about_p4: "I also have project experience with Java, Spring Boot, Python, FastAPI, PostgreSQL, REST APIs, JavaScript, Tailwind CSS, Docker as well as SQL and NoSQL databases.",
       stat_bsc: "Computer Science",
@@ -276,7 +276,7 @@
 
       contact_kicker: "Contact",
       contact_title: "Let's connect.",
-      contact_lead: "I am interested in positions and projects in software testing and quality assurance, full-stack and backend development, data analysis, data automation and security-oriented software development.",
+      contact_lead: "I am interested in positions and projects in software testing and quality assurance, full-stack development, data analysis, data automation and security-oriented software development.",
       contact_email: "Email",
       contact_location: "Location",
 
@@ -295,8 +295,8 @@
 
       hero_eyebrow: "بكالوريوس علوم الحاسوب · طالب ماجستير في أمن الإنترنت",
       hero_title: "مرحبًا، أنا محمد الحلاق.",
-      hero_subtitle: "اختبار البرمجيات وضمان الجودة، وتطوير الواجهات والخوادم (Full-Stack وBackend)، وتحليل البيانات، وحلول برمجية موجّهة نحو الأمن.",
-      hero_text: "أجمع بين معارفي في اختبار البرمجيات وضمان الجودة وسنوات من الخبرة العملية في تحليل البيانات وتطوير الأنظمة المتكاملة وتقنيات الخوادم وأمن المعلومات. ينصبّ تركيزي على حلول برمجية منظَّمة ومبنية على البيانات وقابلة للتتبّع تقنيًا.",
+      hero_subtitle: "اختبار البرمجيات وضمان الجودة، وتطوير الأنظمة المتكاملة (Full-Stack)، وتحليل البيانات، وحلول برمجية موجّهة نحو الأمن.",
+      hero_text: "أجمع بين معارفي في اختبار البرمجيات وضمان الجودة وسنوات من الخبرة العملية في تحليل البيانات وتطوير الأنظمة المتكاملة وأمن المعلومات. ينصبّ تركيزي على حلول برمجية منظَّمة ومبنية على البيانات وقابلة للتتبّع تقنيًا.",
       hero_role_testing: "مختبر برمجيات",
       hero_btn_projects: "عرض المشاريع",
       hero_btn_contact: "تواصل",
@@ -304,7 +304,7 @@
       about_kicker: "الملف الشخصي",
       about_title: "نبذة عني",
       about_p1: "أنهيتُ درجة البكالوريوس في علوم الحاسوب في جامعة فيستفاليا للعلوم التطبيقية، وأدرس حاليًا في برنامج الماجستير في أمن الإنترنت.",
-      about_p2: "تتركّز مجالاتي العملية في اختبار البرمجيات وضمان الجودة، وتطوير الأنظمة المتكاملة والخوادم، وتحليل البيانات، والأتمتة التقنية، وتطوير البرمجيات الموجّهة نحو الأمن.",
+      about_p2: "تتركّز مجالاتي العملية في اختبار البرمجيات وضمان الجودة، وتطوير الأنظمة المتكاملة، وتحليل البيانات، والأتمتة التقنية، وتطوير البرمجيات الموجّهة نحو الأمن.",
       about_p3: "بصفتي طالبًا عاملاً في شركة Adecco، اكتسبتُ خبرة لعدة سنوات في تحليل مؤشرات الأداء، وإعداد التقارير، وإدارة جودة البيانات، وأتمتة التحليلات المتكرّرة.",
       about_p4: "كما أمتلك خبرة في مشاريع باستخدام Java وSpring Boot وPython وFastAPI وPostgreSQL وREST APIs وJavaScript وTailwind CSS وDocker، إضافةً إلى قواعد بيانات SQL وNoSQL.",
       stat_bsc: "علوم الحاسوب",
@@ -409,7 +409,7 @@
 
       contact_kicker: "التواصل",
       contact_title: "لنتواصل معًا.",
-      contact_lead: "أهتمّ بالوظائف والمشاريع في مجالات اختبار البرمجيات وضمان الجودة، وتطوير الأنظمة المتكاملة والخوادم، وتحليل البيانات، وأتمتة البيانات، وتطوير البرمجيات الموجّهة نحو الأمن.",
+      contact_lead: "أهتمّ بالوظائف والمشاريع في مجالات اختبار البرمجيات وضمان الجودة، وتطوير الأنظمة المتكاملة، وتحليل البيانات، وأتمتة البيانات، وتطوير البرمجيات الموجّهة نحو الأمن.",
       contact_email: "البريد الإلكتروني",
       contact_location: "الموقع",
 
