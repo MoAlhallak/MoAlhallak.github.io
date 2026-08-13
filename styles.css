@@ -1111,6 +1111,7 @@ html[data-theme="dark"] .theme-toggle__moon {
 }
 
 .project:hover .project__desc,
+.project:hover .project__period,
 .project:hover::before {
   color: color-mix(in srgb, var(--bg) 68%, transparent);
 }
@@ -1148,6 +1149,20 @@ html[data-theme="dark"] .theme-toggle__moon {
   font-size: 0.9rem;
   line-height: 1.72;
   transition: color 240ms ease;
+}
+
+.project__period {
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 240ms ease;
+}
+
+.project__period + .project__desc {
+  margin-block-start: 0.65rem;
 }
 
 .badge {
