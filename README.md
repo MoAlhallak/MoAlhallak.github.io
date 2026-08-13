@@ -1,8 +1,8 @@
 # Portfolio – Mohammad Al Hallak
 
-Persönliche, zweisprachige (Deutsch / Englisch) Portfolio-Website von **Mohammad Al Hallak** –
-B.Sc. Informatik und M.Sc.-Student Internet-Sicherheit. Schwerpunkte: Full-Stack- und
-Backend-Entwicklung, Datenanalyse sowie Security-nahe Softwarelösungen.
+Persönliche, dreisprachige (Deutsch / Englisch / Arabisch) Portfolio-Website von **Mohammad Al Hallak** –
+B.Sc. Informatik und M.Sc.-Student Internet-Sicherheit. Schwerpunkte: Software Testing,
+Qualitätssicherung, Full-Stack- und Backend-Entwicklung, Datenanalyse sowie IT-Sicherheit.
 
 Die Seite ist eine reine statische Website und läuft ohne Build-Prozess direkt über **GitHub Pages**.
 

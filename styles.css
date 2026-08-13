@@ -1050,6 +1050,19 @@ html[data-theme="dark"] .theme-toggle__moon {
   font-weight: 700;
 }
 
+.timeline__org-link {
+  color: inherit;
+  text-decoration-color: var(--line-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+
+.timeline__org-link:hover {
+  color: var(--ink);
+  text-decoration-color: currentColor;
+}
+
 .timeline__list {
   display: grid;
   gap: 0.5rem;
