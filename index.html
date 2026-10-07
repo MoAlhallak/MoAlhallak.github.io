@@ -29,7 +29,7 @@
 
   <link rel="canonical" href="https://moalhallak.github.io/" />
   <link rel="icon" href="assets/profile-placeholder.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260813-profile-copy" />
+  <link rel="stylesheet" href="styles.css?v=20261007-kg-project" />
 
   <!--
     Frühzeitige Initialisierung von Theme (hell/dunkel) und Leserichtung.
@@ -254,7 +254,7 @@
                 <span class="stat__label" data-i18n="stat_data">Jahre Data-Erfahrung</span>
               </li>
               <li class="stat">
-                <span class="stat__value">5</span>
+                <span class="stat__value">6</span>
                 <span class="stat__label" data-i18n="stat_projects">ausgewählte Projekte</span>
               </li>
             </ul>
@@ -430,6 +430,44 @@
 
         <div class="projects">
           <!-- Projekt 1 -->
+          <article class="project reveal" id="kg-it-security">
+            <div class="project__head">
+              <h3 class="project__title">Knowledge Graph IT-Sicherheit</h3>
+              <span class="badge badge--featured" data-i18n="proj_kg_badge">Masterprojekt</span>
+            </div>
+            <p class="project__period" data-i18n="proj_kg_date">Seit April 2026 – voraussichtlich April 2027</p>
+            <p class="project__org" data-i18n="proj_kg_org">Westfälische Hochschule – Institut für Internet-Sicherheit (if(is))</p>
+            <p class="project__desc" data-i18n="proj_kg_desc">Webbasierte Knowledge-Graph-Plattform für den Marktplatz IT-Sicherheit, mit der IT-Sicherheitsbegriffe und ihre fachlichen Zusammenhänge interaktiv dargestellt, durchsucht und überprüft werden. Der Graph verbindet Lösungen, Bedrohungen, Assets, Compliance-Anforderungen, Rollen und Branchen – z. B. zeigt die Auswahl von Ransomware direkt, welche Lösungen davor schützen, sie erkennen oder darauf reagieren.</p>
+            <ul class="project__list">
+              <li data-i18n="proj_kg_1">Knowledge Graph mit Neo4j/Cypher inkl. Beziehungstypen wie PROTECTS_AGAINST, DETECTS und RESPONDS_TO</li>
+              <li data-i18n="proj_kg_2">Backend mit Python/FastAPI, Frontend mit React/TypeScript und interaktiver D3.js-Graphvisualisierung</li>
+              <li data-i18n="proj_kg_3">Suche nach Begriffen, Synonymen und Abkürzungen; Bereichs-, Kategorie- und Beziehungsfilter; Fokus- und Nachbarschaftsansichten</li>
+              <li data-i18n="proj_kg_4">Rollenmodell (Viewer, Experte, Editor, Admin) mit Feedback-, Kommentar- und Änderungsvorschlagsfunktionen</li>
+              <li data-i18n="proj_kg_5">Human-in-the-Loop-Review für neue und KI-vorgeschlagene Beziehungen sowie Import und Kuratierung größerer Datenbestände</li>
+              <li data-i18n="proj_kg_6">CSV-/Tabellenexport und Read-only-Embed-Ansicht zur Integration in andere Webseiten</li>
+              <li data-i18n="proj_kg_7">Aufbereitung des Graphs als strukturierte Wissensquelle für den KI-Assistenten SIA</li>
+              <li data-i18n="proj_kg_8">Automatisierte Tests sowie Browser-/End-to-End-Tests mit Playwright</li>
+            </ul>
+            <p class="project__stats" data-i18n="proj_kg_stats">440 Begriffe · 45 Kategorien · 2.122 bestätigte semantische Beziehungen</p>
+            <ul class="tags">
+              <li class="tag">Python</li>
+              <li class="tag">FastAPI</li>
+              <li class="tag">Neo4j</li>
+              <li class="tag">Cypher</li>
+              <li class="tag">React</li>
+              <li class="tag">TypeScript</li>
+              <li class="tag">D3.js</li>
+              <li class="tag">Docker</li>
+              <li class="tag">REST API</li>
+              <li class="tag">Playwright</li>
+              <li class="tag">GitLab</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://it-sicherheit.de/ratgeber/knowledge-graph/" class="btn btn--small" target="_blank" rel="noopener noreferrer" data-i18n="proj_kg_link" aria-label="Knowledge Graph IT-Sicherheit – Live-Ansicht auf it-sicherheit.de (öffnet in neuem Tab)">Live ansehen</a>
+            </div>
+          </article>
+
+          <!-- Projekt 2 -->
           <article class="project reveal">
             <div class="project__head">
               <h3 class="project__title">Horo Kfz-Werkstatt</h3>
@@ -452,7 +490,7 @@
             </div>
           </article>
 
-          <!-- Projekt 2 -->
+          <!-- Projekt 3 -->
           <article class="project reveal">
             <div class="project__head">
               <h3 class="project__title">AI Research Design Assistant</h3>
@@ -474,7 +512,7 @@
             </div>
           </article>
 
-          <!-- Projekt 3 -->
+          <!-- Projekt 4 -->
           <article class="project reveal">
             <div class="project__head">
               <h3 class="project__title">Nachbar365</h3>
@@ -498,7 +536,7 @@
             </div>
           </article>
 
-          <!-- Projekt 4 -->
+          <!-- Projekt 5 -->
           <article class="project reveal">
             <div class="project__head">
               <h3 class="project__title">GitHub Tag Analyzer / SecuSeek</h3>
@@ -517,7 +555,7 @@
             </div>
           </article>
 
-          <!-- Projekt 5 -->
+          <!-- Projekt 6 -->
           <article class="project reveal">
             <div class="project__head">
               <h3 class="project__title">Cybersecurity Terminology &amp; Knowledge Graphs</h3>
@@ -682,6 +720,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20260813-profile-copy"></script>
+  <script src="script.js?v=20261007-kg-project"></script>
 </body>
 </html>

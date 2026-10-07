@@ -1178,6 +1178,59 @@ html[data-theme="dark"] .theme-toggle__moon {
   margin-block-start: 0.65rem;
 }
 
+.project__org {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  transition: color 240ms ease;
+}
+
+.project__org + .project__desc {
+  margin-block-start: 0.85rem;
+}
+
+.project__list {
+  display: grid;
+  gap: 0.4rem;
+  padding: 0;
+  margin: 0 0 1.2rem;
+  list-style: none;
+}
+
+.project__list li {
+  position: relative;
+  padding-inline-start: 1rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.55;
+  transition: color 240ms ease;
+}
+
+.project__list li::before {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0.72em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  content: "";
+  background: currentColor;
+}
+
+.project__stats {
+  margin: 0 0 1.4rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.project:hover .project__org,
+.project:hover .project__list li {
+  color: color-mix(in srgb, var(--bg) 68%, transparent);
+}
+
 .badge {
   flex: 0 0 auto;
   padding: 0.4rem 0.55rem;
